@@ -220,49 +220,49 @@ order by team;
 #SQL Joins
 #44. WRITE a query to show average avg_age of each group and arrange it in descending order by avg_age.
 select gs.group, avg(td.avg_age) as avg_group_age
-from overall_wc_stats as td inner join group_stage_team_stats as gs 
+from overall_wc_stats  td inner join group_stage_team_stats  gs 
 on td.team=gs.team
 group by gs.group
 order by avg_group_age desc;
 
 #45. WRITE a query to show sum of fouls for each group and arrange it in ascending order by fouls.
 select gs.group, sum(td.fouls) as sum_fouls 
-from overall_wc_stats as td inner join group_stage_team_stats as gs 
+from overall_wc_stats td inner join group_stage_team_stats gs 
 on td.team=gs.team
 group by gs.group 
 order by sum_fouls;
 
 #46. WRITE a query to show total number of games for each group and arrange it in descending order by games.
 select gs.group, sum(td.games) as sum_games 
-from overall_wc_stats as td inner join group_stage_team_stats as gs 
+from overall_wc_stats td inner join group_stage_team_stats gs 
 on td.team=gs.team
 group by gs.group 
 order by sum_games desc;
 
 #47. WRITE a query to show total number of players_used for each group and arrange it in ascending order by players_used.
 select gs.group, sum(td.players_used) as sum_players_used 
-from overall_wc_stats as td inner join group_stage_team_stats as gs
+from overall_wc_stats td inner join group_stage_team_stats  gs
 on td.team=gs.team
 group by gs.group 
 order by sum_players_used;
 
 #48. WRITE a query to show total number of offsides for each group and arrange it in ascending order by offsides.
 select gs.group, sum(td.offsides) as sum_offsides 
-from overall_wc_stats as td inner join group_stage_team_stats as gs 
+from overall_wc_stats td inner join group_stage_team_stats gs 
 on td.team=gs.team
 group by gs.group 
 order by sum_offsides;
 
 #49. WRITE a query to show average passes_pct for each group and arrange it in descending order by passes_pct.
 select gs.group, avg(td.passes_pct) as avg_passes_pct
-from overall_wc_stats as td inner join group_stage_team_stats as gs 
+from overall_wc_stats td inner join group_stage_team_stats gs 
 on td.team=gs.team
 group by gs.group 
 order by avg_passes_pct desc;
 
 #50. WRITE a query to show average goals_per90 for each group and arrange it in ascending order by goals_per90.
 select gs.group, avg(td.goals_per90) as avg_goals_per90
-from overall_wc_stats as td inner join group_stage_team_stats as gs 
+from overall_wc_stats td inner join group_stage_team_stats gs 
 on td.team=gs.team
 group by gs.group 
 order by avg_goals_per90;
